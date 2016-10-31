@@ -1,0 +1,25 @@
+{
+	"extends": "eslint:recommended",
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module"
+	},
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"globals": {
+		"Modernizr": false,
+		"$": false,
+    "Breakpoints": false,
+    "Set": false
+	},
+	"rules": {
+		"strict": 1,
+    "no-debugger": "warn",
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"no-unused-vars": ["warn", { "vars": "all", "args": "none" }],
+		"no-console": ["warn"]
+	}
+}

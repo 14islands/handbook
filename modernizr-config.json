@@ -1,0 +1,13 @@
+{
+  "options": [
+    "setClasses",
+    "prefixed",
+    "prefixes",
+    "prefixedCSS",
+    "mq"
+  ],
+  "feature-detects": [
+    "test/svg",
+    "css/flexbox"
+  ]
+}
