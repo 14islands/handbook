@@ -12,9 +12,16 @@ html
   body
 
     h1 HELLO WORLD
-    include components/MyComponent/MyComponent
 
-    //- script(src='/vendor/jquery-2.2.3.min.js')
+    section
+      h2 First section
+      //- include a component
+      include components/MyComponent/MyComponent
+
+    section
+      h2 Another section
+      p Lorem ipsum...
+
     script(src='/bundle.min.js')
 
 

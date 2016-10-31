@@ -14,6 +14,8 @@ The 14islands handbook.
 `npm run build`
 
 # TODO
-* Add jQuery as vendor script
 * Add component-loader-js
 * Build awesome stuff!
+
+# TIPS
+* http://youmightnotneedjquery.com
