@@ -46,6 +46,7 @@
     "serve-static": "1.10.2",
     "stylus": "^0.54.2",
     "svgo": "^0.6.6",
+    "typographic": "^2.9.3",
     "uglifyify": "^3.0.1",
     "uglifyjs": "^2.4.10",
     "watch": "^0.17.1",
