@@ -1,4 +1,14 @@
 import webfontloader from 'webfontloader'
+import ComponentLoader, {Component} from 'component-loader-js';
+import BurgerButton from './components/BurgerButton/BurgerButton.js';
+import Menu from './components/Menu/Menu.js';
+import ScrollWatcher from './components/ScrollWatcher/ScrollWatcher.js';
+const componentLoader = new ComponentLoader({
+  BurgerButton,
+  Menu,
+  ScrollWatcher
+});
+componentLoader.scan();
 
 console.log('hello javascript')
 
