@@ -1,0 +1,98 @@
+.Menu
+  position: fixed
+  z-index: 1001
+  width: 100%
+  transform: translate3d(-100%,0,0)
+  +min-md()
+    width: 370px
+    transform: translate3d(-370px,0,0)
+  height: 100%
+  font-size: 1.15em
+  transition: transform 0.3s
+  &-items
+    display: flex;
+    align-items: center
+    justify-content: center
+    background: $brand-navy
+    width: calc(100% - 120px)
+    height: 100%
+    padding: 0 1em
+  &-button
+    color: $menu-font-color
+    background: none
+    &.active
+      background-image: linear-gradient(to bottom,transparent 50%,$brand-yellow 50%)
+      background-repeat: repeat-x
+      background-size: 2px 2px
+      background-position: 0 100%
+  &-buttonClose
+    width: 16px
+    height: 16px
+    position: absolute
+    right: 1em
+    top: 1em
+    overflow: hidden
+    text-indent: 16px
+    border: none
+    z-index: 1001
+    background: transparent
+    color: transparent
+    &:before, &:after
+      content: ''
+      position: absolute
+      width: 2px
+      height: 100%
+      top: 0
+      left: 50%
+      background: $menu-font-color
+    &:before
+      -webkit-transform: rotate(45deg)
+      transform: rotate(45deg)
+    &:after
+      -webkit-transform: rotate(-45deg)
+      transform: rotate(-45deg)
+  &-list
+    list-style-type: none
+
+.Container, .Content
+  overflow-x: hidden
+
+.Content
+  -webkit-overflow-scrolling: touch
+  transition: transform 0.3s
+  &-inner
+    position: relative
+    &:before
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 10
+      width: 100%
+      height: 100%
+      content: ''
+      opacity: 0
+      transition: opacity 0.3s, transform 0s 0.3s
+      transform: translate3d(100%,0,0)
+
+.Shape
+  position: absolute;
+  width: 120px
+  height: 100%
+  top: 0
+  right: 0
+  fill: $brand-navy
+  z-index: 1000
+
+
+// Shown Menu
+.Body.is-showing
+  overflow-x: hidden
+  .Menu
+    transform: translate3d(0,0,0)
+  .Content
+    transition-delay: 0.1s
+    +min-md()
+      transform: translate3d(100px,0,0)
+    &:before
+      +min-md()
+        transform: translate3d(0,0,0)

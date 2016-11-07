@@ -1,11 +1,55 @@
-typographic()
+@import StylusModularScale
+
+ms(scale)
+    modularScale(scale, 24, 'golden')
+
+h1
+  font-size ms(3)
+  +max-xs()
+    font-size ms(2)
+h2
+  font-size ms(2)
+  +max-xs()
+    font-size ms(1)
+h3
+  font-size ms(1.5)
+  +max-xs()
+    font-size ms(1)
+h4
+  font-size ms(1)
+h5
+  font-size ms(0.5)
+h6
+  font-size ms(0)
+
+p, blockquote, pre, li, button
+  font-size ms(0)
+  line-height: 1.4
+
+h1, h2, h3, h4
+  max-width: 800px
+  font-weight: 600
+  letter-spacing: -0.03em
+  line-height: 1
 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, li
-  font-family: CalibreWeb, Helvetica, Arial
+  font-family: 'CalibreWeb'
   -webkit-font-smoothing: antialiased
+  color: #333
+
+li
+  line-height: 1.5
 
  .emoji
     font-weight: normal
     font-style: normal
     font-family: "Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol","Android Emoji","EmojiSymbols"
 
+a
+  background-image: linear-gradient(to bottom,transparent 50%,$brand-yellow 50%)
+  background-repeat: repeat-x
+  background-size: 2px 2px
+  background-position: 0 100%
+  text-decoration: none
+  &:hover
+    color: $brand-yellow
