@@ -18,6 +18,9 @@
     "watch:svg": "onchange 'src/svg/**/*.svg' -- npm run build:svg -s",
     "watch:pug": "onchange 'src/**/*.pug' -- npm run build:pug -s",
     "watch": "npm-run-all --parallel watch:*",
+    "prestart": "npm-run-all --parallel copy:fonts-build copy:vendor",
+    "copy:fonts-build": "cp -R ./src/fonts ./build/",
+    "copy:vendor": "cp -R ./src/vendor ./build/",
     "preinstall": "npm install pug-cli -g",
     "postinstall": "npm run build"
   },
