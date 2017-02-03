@@ -71,13 +71,14 @@ export default class extends Component {
     }
 
     _onMenuLinkClick(event){
-      console.log("_onMenuLinkClick", event.target.id);
+      event.preventDefault()
       this.scrollToSection(event.target.id);
     }
 
     scrollToSection(id){
-      const sectionId = id.replace("Button-", "#");
-      TweenLite.to(window, 1, {scrollTo:{y: sectionId, offsetY:70}});
+      const sectionId = id.replace("Button-", "");
+      const top = document.getElementById(sectionId).offsetTop;
+      TweenLite.to(window, 1, {scrollTo:{y: top, offsetY:70}});
       if (Modernizr.mq('(max-width: 992px)')) {
         this._onCloseMenu();
       }
